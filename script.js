@@ -28,6 +28,7 @@ var johnMark = 'John and Mark';
 Vairable mutation and type coercion
 */
 
+/*
 var firstName = 'John';
 var age = 28;
 
@@ -51,3 +52,34 @@ alert(firstName + ' is a ' + age + ' years old ' + job + '. Is he married? ' + i
 
 var lastName = prompt('What is his last name?');
 console.log(firstName + ' ' + lastName);
+*/
+
+/****************************
+Basic operators
+*/
+
+var year, ageJohn, ageMark, yearJohn, yearMark;
+year = 2019;
+ageJohn = 28;
+ageMark = 35;
+
+// Math operators
+yearJohn = year - ageJohn;
+yearMark = year - ageMark;
+
+console.log('John was born in ' + yearJohn + ', while Mark was born in ' + yearMark + '.');
+
+console.log(year + 2);
+console.log(year * 2);
+console.log(year / 2);
+
+// Logical operators
+var johnOlder = ageJohn > ageMark;
+console.log(johnOlder);
+
+//typeof operator
+console.log(typeof ageJohn);
+console.log(typeof johnOlder);
+console.log(typeof 'Hi string');
+var x;
+console.log(typeof x);
