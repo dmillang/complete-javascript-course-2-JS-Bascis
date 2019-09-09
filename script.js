@@ -88,33 +88,70 @@ Basic operators
 Operator precedence
 */
 
-var now, ageJohn, fullAge;
+// var now, ageJohn, fullAge;
 
-now = 2019;
-yearJohn = 1989;
-fullAge = 18;
+// now = 2019;
+// yearJohn = 1989;
+// fullAge = 18;
 
-// Multiple operators
-var isFullAge = now - yearJohn >= fullAge; //true
-console.log(isFullAge);
+// // Multiple operators
+// var isFullAge = now - yearJohn >= fullAge; //true
+// console.log(isFullAge);
 
-// Grouping (parenthesis)
-var ageJohn = now - yearJohn;
-var ageMark = 35;
-var ageAverage = (ageJohn + ageMark) / 2;
-console.log(ageJohn);
-console.log(ageAverage);
+// // Grouping (parenthesis)
+// var ageJohn = now - yearJohn;
+// var ageMark = 35;
+// var ageAverage = (ageJohn + ageMark) / 2;
+// console.log(ageJohn);
+// console.log(ageAverage);
 
-// Multiple assignments
-var x,y;
-x = y = (3 + 5) * 4 - 6; // 8 * 4 - 6 // 32 - 6 // 26
-console.log(x,y);
+// // Multiple assignments
+// var x,y;
+// x = y = (3 + 5) * 4 - 6; // 8 * 4 - 6 // 32 - 6 // 26
+// console.log(x,y);
 
-// More operators
-var z = 5;
-z *= 5; // 25
-console.log('z *= 5 equals ' + z);
-z += 5;
-console.log('z += 5 equals "z = 25 + 5" which equals ' + z); // 30
-z++;
-console.log('++z equals ' + z); // 31
+// // More operators
+// var z = 5;
+// z *= 5; // 25
+// console.log('z *= 5 equals ' + z);
+// z += 5;
+// console.log('z += 5 equals "z = 25 + 5" which equals ' + z); // 30
+// z++;
+// console.log('++z equals ' + z); // 31
+
+/*****************************
+* CODING CHALLENGE 1
+*/
+
+/*
+Mark and John are trying to compare their BMI (Body Mass Index), which is calculated using the formula: BMI = mass / height^2 = mass / (height * height). (mass in kg and height in meter).
+
+1. Store Mark's and John's mass and height in variables
+2. Calculate both their BMIs
+3. Create a boolean variable containing information about whether Mark has a higher BMI than John.
+4. Print a string to the console containing the variable from step 3. (Something like "Is Mark's BMI higher than John's? true"). 
+
+GOOD LUCK 😀
+*/
+
+// 1
+var heightMark, heightJohn, massMark, massJohn
+
+heightMark = 1.86;
+massMark = 92;
+
+heightJohn = 1.94;
+massJohn = 110;
+
+// 2
+squareRootHeightMark = heightMark *= 2;
+BMIMark = massMark / squareRootHeightMark;
+
+squareRootHeightJohn = heightJohn *= 2;
+BMIJohn = massJohn / squareRootHeightJohn;
+
+// 3
+var isMarkBMIHigher = BMIMark > BMIJohn;
+
+//4 
+console.log('Is Mark\'s BMI higher than John\'s? ' + isMarkBMIHigher, 'Mark: ' + BMIMark, 'John: ' + BMIJohn);
