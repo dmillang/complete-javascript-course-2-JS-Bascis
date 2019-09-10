@@ -200,15 +200,83 @@ GOOD LUCK 😀
 * Boolean Logic
 */
 
-firstName = 'John';
-age = 27;
+// firstName = 'John';
+// age = 27;
 
-if (age < 13) {
-    console.log(firstName + ' is a boy');
-} else if (age >= 13 && age < 20) {
-    console.log(firstName + ' is a teenager');
-} else if (age >= 20 && age < 30) {
-    console.log(firstName + ' is a young man');
-} else {
-    console.log(firstName + ' is a man');
+// if (age < 13) {
+//     console.log(firstName + ' is a boy');
+// } else if (age >= 13 && age < 20) {
+//     console.log(firstName + ' is a teenager');
+// } else if (age >= 20 && age < 30) {
+//     console.log(firstName + ' is a young man');
+// } else {
+//     console.log(firstName + ' is a man');
+// }
+
+/*****************************
+* The Ternary Operator and Switch Statements
+*/
+
+// firstName = 'John';
+// age = 18;
+
+// Ternary Operator
+// age >= 18 ? console.log(firstName + ' drinks beer') : console.log(firstName + ' drinks juice');
+
+// var drink = age >= 18 ? 'beer' : 'juice'
+// console.log(drink);
+
+// if (age >= 18) {
+//     var drink = 'beer';
+// } else {
+//     var drink = 'juice';
+// }
+
+// Switch Statement
+
+firstName = 'John';
+age = 26;
+job = 'instructor';
+
+switch (job) {
+    case 'teacher':
+    case 'instructor':
+        console.log(firstName + ' teaches how to code.');
+        break;
+    case 'driver':
+        console.log(firstName + ' drives an uber.');
+        break;
+    case 'designer':
+        console.log(firstName + ' designs responsive websites.');
+        break;
+    default:
+        console.log(firstName + ' does something else.');
+        break;
 }
+
+age = 42;
+
+switch (true) {
+    case age < 13:
+        console.log(firstName + ' is a boy');
+        break;
+    case age >= 13 && age < 20:
+        console.log(firstName + ' is a teenager');
+        break;
+    case age >= 20 && age < 30:
+        console.log(firstName + ' is a young man');
+        break;
+    default:
+        console.log(firstName + ' is a man');
+        break;
+}
+
+// if (age < 13) {
+//     console.log(firstName + ' is a boy');
+// } else if (age >= 13 && age < 20) {
+//     console.log(firstName + ' is a teenager');
+// } else if (age >= 20 && age < 30) {
+//     console.log(firstName + ' is a young man');
+// } else {
+//     console.log(firstName + ' is a man');
+// }
