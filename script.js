@@ -288,17 +288,86 @@ GOOD LUCK 😀
 // Falsy values: undefined, null, 0, '' <- empty strings, NaN
 // Truthy: NOT falsy values
 
-var height;
+// var height;
 
-height = 23;
+// height = 23;
 
-if (height || height === 0) {
-    console.log('variable is defined');
-} else  {
-    console.log('variable has NOT been defined');
+// if (height || height === 0) {
+//     console.log('variable is defined');
+// } else  {
+//     console.log('variable has NOT been defined');
+// }
+
+// // Equality operators (type coercion)
+// if (height == '23') {
+//     console.log('The == equality operator does type coercion');
+// }
+
+/*****************************
+* CODING CHALLENGE 2
+*/
+
+/*
+John and Mike both play basketball in different teams. In the latest 3 games, John's team scored 89, 120 and 103 points, while Mike's team scored 116, 94 and 123 points.
+
+1. Calculate the average score for each team
+2. Decide which teams wins in average (highest average score), and print the winner to the console. Also include the average score in the output.
+3. Then change the scores to show different winners. Don't forget to take into account there might be a draw (the same average score)
+
+4. EXTRA: Mary also plays basketball, and her team scored 97, 134 and 105 points. Like before, log the average winner to the console. HINT: you will need the && operator to take the decision. If you can't solve this one, just watch the solution, it's no problem :)
+
+5. Like before, change the scores to generate different winners, keeping in mind there might be draws.
+
+GOOD LUCK 😀
+*/
+
+// 1
+
+var johnTeam, mikeTeam, maryTeam;
+
+johnTeam = (89 + 120 + 103) / 3; // 104
+mikeTeam = (116 + 94 + 123) / 3; // 111
+maryTeam = (97 + 134 + 105) / 3; // 112
+
+// 2 & 3
+
+switch (true) {
+    case johnTeam > mikeTeam:
+        console.log('John\'s team wins with an average of ' + johnTeam);
+        break;
+    case mikeTeam > johnTeam:
+        console.log('Mike\'s team wins with an average of ' + mikeTeam);
+        break;
+    case mikeTeam === johnTeam:
+        console.log('Mike\'s and John\'s teams have the same average of ' + mikeTeam);
+        break;
+    default:
+        console.log('We cannot calculate Mike\'s and John\'s teams average');
+        break;
 }
 
-// Equality operators (type coercion)
-if (height == '23') {
-    console.log('The == equality operator does type coercion');
+// 4
+
+johnTeam = (97 + 134 + 105) / 3; // 104
+mikeTeam = (97 + 134 + 105) / 3; // 111
+maryTeam = (97 + 134 + 105) / 3; // 112
+
+switch (true) {
+    case johnTeam > mikeTeam && johnTeam > maryTeam:
+        console.log('John\'s team wins with an average of ' + johnTeam);
+        break;
+    case mikeTeam > johnTeam && mikeTeam > maryTeam:
+        console.log('Mike\'s team wins with an average of ' + mikeTeam);
+        break;
+    case maryTeam > johnTeam && maryTeam > mikeTeam:
+        console.log('Mary\'s team wins with an average of ' + maryTeam);
+        break;
+    case mikeTeam === johnTeam && mikeTeam === maryTeam:
+        console.log('Mike\'s, John\'s and Mary\'s teams have all the same average of ' + johnTeam);
+        break;
+    default:
+        console.log('We cannot calculate Mike\'s, John\'s and Mary\'s teams average');
+        break;
 }
+
+console.log(maryTeam,johnTeam,mikeTeam);
