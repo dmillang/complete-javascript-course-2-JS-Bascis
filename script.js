@@ -234,42 +234,42 @@ GOOD LUCK 😀
 
 // Switch Statement
 
-firstName = 'John';
-age = 26;
-job = 'instructor';
+// firstName = 'John';
+// age = 26;
+// job = 'instructor';
 
-switch (job) {
-    case 'teacher':
-    case 'instructor':
-        console.log(firstName + ' teaches how to code.');
-        break;
-    case 'driver':
-        console.log(firstName + ' drives an uber.');
-        break;
-    case 'designer':
-        console.log(firstName + ' designs responsive websites.');
-        break;
-    default:
-        console.log(firstName + ' does something else.');
-        break;
-}
+// switch (job) {
+//     case 'teacher':
+//     case 'instructor':
+//         console.log(firstName + ' teaches how to code.');
+//         break;
+//     case 'driver':
+//         console.log(firstName + ' drives an uber.');
+//         break;
+//     case 'designer':
+//         console.log(firstName + ' designs responsive websites.');
+//         break;
+//     default:
+//         console.log(firstName + ' does something else.');
+//         break;
+// }
 
-age = 42;
+// age = 42;
 
-switch (true) {
-    case age < 13:
-        console.log(firstName + ' is a boy');
-        break;
-    case age >= 13 && age < 20:
-        console.log(firstName + ' is a teenager');
-        break;
-    case age >= 20 && age < 30:
-        console.log(firstName + ' is a young man');
-        break;
-    default:
-        console.log(firstName + ' is a man');
-        break;
-}
+// switch (true) {
+//     case age < 13:
+//         console.log(firstName + ' is a boy');
+//         break;
+//     case age >= 13 && age < 20:
+//         console.log(firstName + ' is a teenager');
+//         break;
+//     case age >= 20 && age < 30:
+//         console.log(firstName + ' is a young man');
+//         break;
+//     default:
+//         console.log(firstName + ' is a man');
+//         break;
+// }
 
 // if (age < 13) {
 //     console.log(firstName + ' is a boy');
@@ -280,3 +280,25 @@ switch (true) {
 // } else {
 //     console.log(firstName + ' is a man');
 // }
+
+/*****************************
+* Truthy and Falsy Values and Equality Operators
+*/
+
+// Falsy values: undefined, null, 0, '' <- empty strings, NaN
+// Truthy: NOT falsy values
+
+var height;
+
+height = 23;
+
+if (height || height === 0) {
+    console.log('variable is defined');
+} else  {
+    console.log('variable has NOT been defined');
+}
+
+// Equality operators (type coercion)
+if (height == '23') {
+    console.log('The == equality operator does type coercion');
+}
