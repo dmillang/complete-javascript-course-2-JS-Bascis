@@ -323,51 +323,79 @@ GOOD LUCK 😀
 
 // 1
 
-var johnTeam, mikeTeam, maryTeam;
+// var johnTeam, mikeTeam, maryTeam;
 
-johnTeam = (89 + 120 + 103) / 3; // 104
-mikeTeam = (116 + 94 + 123) / 3; // 111
-maryTeam = (97 + 134 + 105) / 3; // 112
+// johnTeam = (89 + 120 + 103) / 3; // 104
+// mikeTeam = (116 + 94 + 123) / 3; // 111
+// maryTeam = (97 + 134 + 105) / 3; // 112
 
-// 2 & 3
+// // 2 & 3
 
-switch (true) {
-    case johnTeam > mikeTeam:
-        console.log('John\'s team wins with an average of ' + johnTeam);
-        break;
-    case mikeTeam > johnTeam:
-        console.log('Mike\'s team wins with an average of ' + mikeTeam);
-        break;
-    case mikeTeam === johnTeam:
-        console.log('Mike\'s and John\'s teams have the same average of ' + mikeTeam);
-        break;
-    default:
-        console.log('We cannot calculate Mike\'s and John\'s teams average');
-        break;
+// switch (true) {
+//     case johnTeam > mikeTeam:
+//         console.log('John\'s team wins with an average of ' + johnTeam);
+//         break;
+//     case mikeTeam > johnTeam:
+//         console.log('Mike\'s team wins with an average of ' + mikeTeam);
+//         break;
+//     case mikeTeam === johnTeam:
+//         console.log('Mike\'s and John\'s teams have the same average of ' + mikeTeam);
+//         break;
+//     default:
+//         console.log('We cannot calculate Mike\'s and John\'s teams average');
+//         break;
+// }
+
+// // 4
+
+// johnTeam = (97 + 134 + 105) / 3; // 104
+// mikeTeam = (97 + 134 + 105) / 3; // 111
+// maryTeam = (97 + 134 + 105) / 3; // 112
+
+// switch (true) {
+//     case johnTeam > mikeTeam && johnTeam > maryTeam:
+//         console.log('John\'s team wins with an average of ' + johnTeam);
+//         break;
+//     case mikeTeam > johnTeam && mikeTeam > maryTeam:
+//         console.log('Mike\'s team wins with an average of ' + mikeTeam);
+//         break;
+//     case maryTeam > johnTeam && maryTeam > mikeTeam:
+//         console.log('Mary\'s team wins with an average of ' + maryTeam);
+//         break;
+//     case mikeTeam === johnTeam && mikeTeam === maryTeam:
+//         console.log('Mike\'s, John\'s and Mary\'s teams have all the same average of ' + johnTeam);
+//         break;
+//     default:
+//         console.log('We cannot calculate Mike\'s, John\'s and Mary\'s teams average');
+//         break;
+// }
+
+// console.log(maryTeam,johnTeam,mikeTeam);
+
+/*****************************
+* Functions
+*/
+
+function calculateAge(birthYear) {
+    return 2019 - birthYear;
 }
 
-// 4
+var ageJohn = calculateAge(1990);
+var ageMike = calculateAge(1946);
+var ageJane = calculateAge(1989);
+console.log(ageJohn,ageMike,ageJane);
 
-johnTeam = (97 + 134 + 105) / 3; // 104
-mikeTeam = (97 + 134 + 105) / 3; // 111
-maryTeam = (97 + 134 + 105) / 3; // 112
+function yearsUntilRetirement(year, firstName) {
+    var age = calculateAge(year);
+    var retirement = 65 - age;
 
-switch (true) {
-    case johnTeam > mikeTeam && johnTeam > maryTeam:
-        console.log('John\'s team wins with an average of ' + johnTeam);
-        break;
-    case mikeTeam > johnTeam && mikeTeam > maryTeam:
-        console.log('Mike\'s team wins with an average of ' + mikeTeam);
-        break;
-    case maryTeam > johnTeam && maryTeam > mikeTeam:
-        console.log('Mary\'s team wins with an average of ' + maryTeam);
-        break;
-    case mikeTeam === johnTeam && mikeTeam === maryTeam:
-        console.log('Mike\'s, John\'s and Mary\'s teams have all the same average of ' + johnTeam);
-        break;
-    default:
-        console.log('We cannot calculate Mike\'s, John\'s and Mary\'s teams average');
-        break;
+    if (retirement < 0) {
+        console.log(firstName + ' is already retired.')
+    } else {
+        console.log(firstName + ' retires in ' + retirement + ' years.');
+    }
 }
 
-console.log(maryTeam,johnTeam,mikeTeam);
+yearsUntilRetirement(1990, 'John');
+yearsUntilRetirement(1946, 'Mike');
+yearsUntilRetirement(1989, 'Jane');
