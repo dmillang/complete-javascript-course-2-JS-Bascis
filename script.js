@@ -408,19 +408,54 @@ GOOD LUCK 😀
 // function whatDoYouDo(firstName, job) {}
 
 // Function Expression
-var whatDoYouDo = function(firstName, job) {
-    switch (job) {
-        case 'teacher':
-            return firstName + ' teaches kids how to code.'
-        case 'driver':
-            return firstName + ' drives a Uber.'
-        case 'designer':
-            return firstName + ' designs websites.'
-        default:
-            return firstName + ' does something else.'
-    }
-}
+// var whatDoYouDo = function(firstName, job) {
+//     switch (job) {
+//         case 'teacher':
+//             return firstName + ' teaches kids how to code.'
+//         case 'driver':
+//             return firstName + ' drives a Uber.'
+//         case 'designer':
+//             return firstName + ' designs websites.'
+//         default:
+//             return firstName + ' does something else.'
+//     }
+// }
 
-console.log(whatDoYouDo('John', 'teacher'));
-console.log(whatDoYouDo('Jane', 'designer'));
-console.log(whatDoYouDo('Mike', 'retired'));
+// console.log(whatDoYouDo('John', 'teacher'));
+// console.log(whatDoYouDo('Jane', 'designer'));
+// console.log(whatDoYouDo('Mike', 'retired'));
+
+/*****************************
+* Arrays
+*/
+
+// Initialize new array
+var names = ['John', 'Mike', 'Jane'];
+var years = new Array(1990, 1974, 1996);
+
+console.log(names[2]);
+console.log(names);
+console.log(names.length);
+
+// Mutate array data
+names[1] = 'Mary';
+names[names.length] = 'Mike';
+console.log(names);
+
+// Different data types
+var john = ['John', 'Smith', 1989, 'doctor', false];
+
+// Add array data
+john.push('blue');
+john.unshift('Mr.');
+
+// Remove array data
+john.pop();
+john.shift();
+
+// Find index number of array data
+console.log(john.indexOf('Smith'));
+
+// Use 'indexOf' array method to check existence of specific data inside the array
+var isDesigner = john.indexOf('designer') === -1 ? 'John is not a designer' : 'John is a designer';
+console.log(isDesigner);
