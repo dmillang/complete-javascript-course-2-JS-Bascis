@@ -429,33 +429,109 @@ GOOD LUCK 😀
 * Arrays
 */
 
-// Initialize new array
-var names = ['John', 'Mike', 'Jane'];
-var years = new Array(1990, 1974, 1996);
+// // Initialize new array
+// var names = ['John', 'Mike', 'Jane'];
+// var years = new Array(1990, 1974, 1996);
 
-console.log(names[2]);
-console.log(names);
-console.log(names.length);
+// console.log(names[2]);
+// console.log(names);
+// console.log(names.length);
 
-// Mutate array data
-names[1] = 'Mary';
-names[names.length] = 'Mike';
-console.log(names);
+// // Mutate array data
+// names[1] = 'Mary';
+// names[names.length] = 'Mike';
+// console.log(names);
 
-// Different data types
-var john = ['John', 'Smith', 1989, 'doctor', false];
+// // Different data types
+// var john = ['John', 'Smith', 1989, 'doctor', false];
 
-// Add array data
-john.push('blue');
-john.unshift('Mr.');
+// // Add array data
+// john.push('blue');
+// john.unshift('Mr.');
 
-// Remove array data
-john.pop();
-john.shift();
+// // Remove array data
+// john.pop();
+// john.shift();
 
-// Find index number of array data
-console.log(john.indexOf('Smith'));
+// // Find index number of array data
+// console.log(john.indexOf('Smith'));
 
-// Use 'indexOf' array method to check existence of specific data inside the array
-var isDesigner = john.indexOf('designer') === -1 ? 'John is not a designer' : 'John is a designer';
-console.log(isDesigner);
+// // Use 'indexOf' array method to check existence of specific data inside the array
+// var isDesigner = john.indexOf('designer') === -1 ? 'John is not a designer' : 'John is a designer';
+// console.log(isDesigner);
+
+/*****************************
+* CODING CHALLENGE 3
+*/
+
+/*
+John and his family went on a holiday and ate at 3 different restaurants. The bills were $124, $48 and $268.
+
+To tip the waiter a fair amount, John created a simple tip calculator (as a function). He likes to tip 20% of the bill when the bill is less than $50, 15% when the bill is between $50 and $200, and 10% if the bill is more than $200.
+
+In the end, John would like to have 2 arrays:
+1) Containing all three tips (one for each bill)
+2) Containing all three final paid amounts (bill + tip).
+
+(NOTE: To calculate 20% of a value, simply multiply it with 20/100 = 0.2)
+
+GOOD LUCK 😀
+*/
+
+// My solution
+
+var bills = [];
+var totals = [];
+
+var rest1 = 124;
+var rest2 = 48;
+var rest3 = 268;
+
+bills.push(rest1);
+bills.push(rest2);
+bills.push(rest3);
+
+function tipCalculator(bill) {
+    if (bill < 50) {
+        total = bill + bill * 0.2;
+    } else if (bill >= 50 && bill <= 200) {
+        total = bill + bill * 0.15;
+    } else {
+        total = bill + bill * 0.1;
+    }
+
+    totals.push(total);
+}
+
+tipCalculator(bills[0]);
+tipCalculator(bills[1]);
+tipCalculator(bills[2]);
+
+console.log(bills,totals);
+
+// Solution in tutorial
+
+/*
+function tipCalculator(bill) {
+    var percentage;
+    if (bill < 50) {
+        percentage = .2;
+    } else if (bill >= 50 && bill < 200) {
+        percentage = .15;
+    } else {
+        percentage = .1;
+    }
+    return percentage * bill;
+}
+
+var bills = [124, 48, 268];
+var tips = [tipCalculator(bills[0]),
+            tipCalculator(bills[1]),
+            tipCalculator(bills[2])];
+
+var finalValues = [bills[0] + tips[0],
+                   bills[1] + tips[1],
+                   bills[2] + tips[2]];
+
+console.log(tips, finalValues);
+*/
