@@ -24,6 +24,8 @@ var johnMark = 'John and Mark';
 //var if = 0;
 */
 
+
+
 /****************************
 Vairable mutation and type coercion
 */
@@ -54,6 +56,8 @@ var lastName = prompt('What is his last name?');
 console.log(firstName + ' ' + lastName);
 */
 
+
+
 /****************************
 Basic operators
 */
@@ -83,6 +87,8 @@ Basic operators
 // console.log(typeof 'Hi string');
 // var x;
 // console.log(typeof x);
+
+
 
 /****************************
 Operator precedence
@@ -119,17 +125,19 @@ Operator precedence
 // z++;
 // console.log('++z equals ' + z); // 31
 
+
+
 /*****************************
 * CODING CHALLENGE 1
 */
 
 /*
-Mark and John are trying to compare their BMI (Body Mass Index), which is calculated using the formula: BMI = mass / height^2 = mass / (height * height). (mass in kg and height in meter).
+Mark and John are trying to compare their bmi (Body Mass Index), which is calculated using the formula: bmi = mass / height^2 = mass / (height * height). (mass in kg and height in meter).
 
 1. Store Mark's and John's mass and height in variables
-2. Calculate both their BMIs
-3. Create a boolean variable containing information about whether Mark has a higher BMI than John.
-4. Print a string to the console containing the variable from step 3. (Something like "Is Mark's BMI higher than John's? true"). 
+2. Calculate both their bmis
+3. Create a boolean variable containing information about whether Mark has a higher bmi than John.
+4. Print a string to the console containing the variable from step 3. (Something like "Is Mark's bmi higher than John's? true"). 
 
 GOOD LUCK 😀
 */
@@ -145,16 +153,18 @@ GOOD LUCK 😀
 
 // // 2
 // squareRootHeightMark = heightMark *= 2;
-// BMIMark = massMark / squareRootHeightMark;
+// bmiMark = massMark / squareRootHeightMark;
 
 // squareRootHeightJohn = heightJohn *= 2;
-// BMIJohn = massJohn / squareRootHeightJohn;
+// bmiJohn = massJohn / squareRootHeightJohn;
 
 // // 3
-// var isMarkBMIHigher = BMIMark > BMIJohn;
+// var isMarkbmiHigher = bmiMark > bmiJohn;
 
 // //4 
-// console.log('Is Mark\'s BMI higher than John\'s? ' + isMarkBMIHigher, 'Mark: ' + BMIMark, 'John: ' + BMIJohn);
+// console.log('Is Mark\'s bmi higher than John\'s? ' + isMarkbmiHigher, 'Mark: ' + bmiMark, 'John: ' + bmiJohn);
+
+
 
 /*****************************
 * If/else Statements
@@ -185,16 +195,18 @@ GOOD LUCK 😀
 // massJohn = 110;
 
 // squareRootHeightMark = heightMark *= 2;
-// BMIMark = massMark / squareRootHeightMark;
+// bmiMark = massMark / squareRootHeightMark;
 
 // squareRootHeightJohn = heightJohn *= 2;
-// BMIJohn = massJohn / squareRootHeightJohn;
+// bmiJohn = massJohn / squareRootHeightJohn;
 
-// if(BMIMark > BMIJohn) {
-//     console.log('Mark has a higher BMI');
+// if(bmiMark > bmiJohn) {
+//     console.log('Mark has a higher bmi');
 // } else {
-//     console.log('John has a higher BMI');
+//     console.log('John has a higher bmi');
 // }
+
+
 
 /*****************************
 * Boolean Logic
@@ -212,6 +224,8 @@ GOOD LUCK 😀
 // } else {
 //     console.log(firstName + ' is a man');
 // }
+
+
 
 /*****************************
 * The Ternary Operator and Switch Statements
@@ -281,6 +295,8 @@ GOOD LUCK 😀
 //     console.log(firstName + ' is a man');
 // }
 
+
+
 /*****************************
 * Truthy and Falsy Values and Equality Operators
 */
@@ -302,6 +318,8 @@ GOOD LUCK 😀
 // if (height == '23') {
 //     console.log('The == equality operator does type coercion');
 // }
+
+
 
 /*****************************
 * CODING CHALLENGE 2
@@ -372,6 +390,8 @@ GOOD LUCK 😀
 
 // console.log(maryTeam,johnTeam,mikeTeam);
 
+
+
 /*****************************
 * Functions
 */
@@ -400,6 +420,8 @@ GOOD LUCK 😀
 // yearsUntilRetirement(1946, 'Mike');
 // yearsUntilRetirement(1989, 'Jane');
 
+
+
 /*****************************
 * Function Statements and Expressions
 */
@@ -424,6 +446,8 @@ GOOD LUCK 😀
 // console.log(whatDoYouDo('John', 'teacher'));
 // console.log(whatDoYouDo('Jane', 'designer'));
 // console.log(whatDoYouDo('Mike', 'retired'));
+
+
 
 /*****************************
 * Arrays
@@ -459,6 +483,8 @@ GOOD LUCK 😀
 // // Use 'indexOf' array method to check existence of specific data inside the array
 // var isDesigner = john.indexOf('designer') === -1 ? 'John is not a designer' : 'John is a designer';
 // console.log(isDesigner);
+
+
 
 /*****************************
 * CODING CHALLENGE 3
@@ -536,6 +562,8 @@ var finalValues = [bills[0] + tips[0],
 console.log(tips, finalValues);
 */
 
+
+
 /*****************************
 * Objects and properties
 */
@@ -579,21 +607,69 @@ console.log(tips, finalValues);
 // john['isMarried'] = false;
 // console.log(john);
 
+
+
 /*****************************
 * Objects and methods
 */
 
+// var john = {
+//     firstName: 'John',
+//     lastName: 'Doe',
+//     birthYear: 1990,
+//     family: ['Jane', 'Mark', 'Bob', 'Emily'],
+//     job: 'teacher',
+//     isMarried: false,
+//     calcAge: function() {
+//         this.age = 2019 - this.birthYear;
+//     }
+// };
+
+// john.calcAge();
+// console.log(john.age);
+
+
+
+/*****************************
+* CODING CHALLENGE 4
+*/
+
+/*
+Let's remember the first coding challenge where Mark and John compared their bmis. Let's now implement the same functionality with objects and methods.
+1. For each of them, create an object with properties for their full name, mass, and height
+2. Then, add a method to each object to calculate the bmi. Save the bmi to the object and also return it from the method.
+3. In the end, log to the console who has the highest bmi, together with the full name and the respective bmi. Don't forget they might have the same bmi.
+
+Remember: bmi = mass / height^2 = mass / (height * height). (mass in kg and height in meter).
+
+GOOD LUCK 😀
+*/
+
+// 1 + 2
 var john = {
-    firstName: 'John',
-    lastName: 'Doe',
-    birthYear: 1990,
-    family: ['Jane', 'Mark', 'Bob', 'Emily'],
-    job: 'teacher',
-    isMarried: false,
-    calcAge: function() {
-        this.age = 2019 - this.birthYear;
+    fullName: 'John Doe',
+    mass: 110,
+    height: 1.94,
+    calcbmi: function() {
+        this.bmi = this.mass / (this.height * this.height);
+        return this.bmi;
     }
 };
 
-john.calcAge();
-console.log(john.age);
+var mike = new Object();
+mike.fullName = 'Mike Dunne';
+mike.mass = 92;
+mike.height = 1.86;
+mike.calcbmi = function() {
+    this.bmi = this.mass / (this.height * this.height);
+    return this.bmi;
+};
+
+// 3
+if (john.calcbmi() > mike.calcbmi()) {
+    console.log(john.fullName + ' has a bigger bmi with a value of ' + john.bmi);
+} else if (ohn.calcbmi() < mike.calcbmi()) {
+    console.log(mike.fullName + ' has a bigger bmi with a value of ' + mike.bmi);
+} else {
+    console.log(john.fullName + ' and ' + mike.fullName + ' have the same bmi.');
+}
