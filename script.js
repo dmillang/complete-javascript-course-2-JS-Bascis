@@ -540,41 +540,60 @@ console.log(tips, finalValues);
 * Objects and properties
 */
 
-// Object literal
+// // Object literal
+// var john = {
+//     firstName: 'John',
+//     lastName: 'Doe',
+//     birthYear: 1990,
+//     family: ['Jane', 'Mark', 'Bob', 'Emily'],
+//     job: 'teacher',
+//     isMarried: false
+// };
+
+// // New Object syntax
+// var mike = new Object();
+
+// // Add value to Object
+// mike.name = 'Mike';
+// mike.birthYear = 1983;
+// mike['lastName'] = 'Dunne';
+
+// // Delete value of Object
+// // delete mike.lastName;
+// delete mike['Dunne'];
+// // delete mike['lastName'];
+
+// console.log(mike);
+
+// // Read object
+// console.log(john,mike);
+
+// // Read value of key
+// console.log(john.firstName);
+// console.log(john['birthYear']);
+// var x = 'birthYear';
+// console.log(john[x]);
+
+// // Mutate array data
+// john.job = 'designer';
+// john['isMarried'] = false;
+// console.log(john);
+
+/*****************************
+* Objects and methods
+*/
+
 var john = {
     firstName: 'John',
     lastName: 'Doe',
     birthYear: 1990,
     family: ['Jane', 'Mark', 'Bob', 'Emily'],
     job: 'teacher',
-    isMarried: false
+    isMarried: false,
+    calcAge: function() {
+        this.age = 2019 - this.birthYear;
+    }
 };
 
-// New Object syntax
-var mike = new Object();
-
-// Add value to Object
-mike.name = 'Mike';
-mike.birthYear = 1983;
-mike['lastName'] = 'Dunne';
-
-// Delete value of Object
-// delete mike.lastName;
-delete mike['Dunne'];
-// delete mike['lastName'];
-
-console.log(mike);
-
-// Read object
-console.log(john,mike);
-
-// Read value of key
-console.log(john.firstName);
-console.log(john['birthYear']);
-var x = 'birthYear';
-console.log(john[x]);
-
-// Mutate array data
-john.job = 'designer';
-john['isMarried'] = false;
-console.log(john);
+john.calcAge();
+console.log(john.age);
