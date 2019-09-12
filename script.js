@@ -480,34 +480,34 @@ GOOD LUCK 😀
 
 // My solution
 
-var bills = [];
-var totals = [];
+// var bills = [];
+// var totals = [];
 
-var rest1 = 124;
-var rest2 = 48;
-var rest3 = 268;
+// var rest1 = 124;
+// var rest2 = 48;
+// var rest3 = 268;
 
-bills.push(rest1);
-bills.push(rest2);
-bills.push(rest3);
+// bills.push(rest1);
+// bills.push(rest2);
+// bills.push(rest3);
 
-function tipCalculator(bill) {
-    if (bill < 50) {
-        total = bill + bill * 0.2;
-    } else if (bill >= 50 && bill <= 200) {
-        total = bill + bill * 0.15;
-    } else {
-        total = bill + bill * 0.1;
-    }
+// function tipCalculator(bill) {
+//     if (bill < 50) {
+//         total = bill + bill * 0.2;
+//     } else if (bill >= 50 && bill <= 200) {
+//         total = bill + bill * 0.15;
+//     } else {
+//         total = bill + bill * 0.1;
+//     }
 
-    totals.push(total);
-}
+//     totals.push(total);
+// }
 
-tipCalculator(bills[0]);
-tipCalculator(bills[1]);
-tipCalculator(bills[2]);
+// tipCalculator(bills[0]);
+// tipCalculator(bills[1]);
+// tipCalculator(bills[2]);
 
-console.log(bills,totals);
+// console.log(bills,totals);
 
 // Solution in tutorial
 
@@ -535,3 +535,46 @@ var finalValues = [bills[0] + tips[0],
 
 console.log(tips, finalValues);
 */
+
+/*****************************
+* Objects and properties
+*/
+
+// Object literal
+var john = {
+    firstName: 'John',
+    lastName: 'Doe',
+    birthYear: 1990,
+    family: ['Jane', 'Mark', 'Bob', 'Emily'],
+    job: 'teacher',
+    isMarried: false
+};
+
+// New Object syntax
+var mike = new Object();
+
+// Add value to Object
+mike.name = 'Mike';
+mike.birthYear = 1983;
+mike['lastName'] = 'Dunne';
+
+// Delete value of Object
+// delete mike.lastName;
+delete mike['Dunne'];
+// delete mike['lastName'];
+
+console.log(mike);
+
+// Read object
+console.log(john,mike);
+
+// Read value of key
+console.log(john.firstName);
+console.log(john['birthYear']);
+var x = 'birthYear';
+console.log(john[x]);
+
+// Mutate array data
+john.job = 'designer';
+john['isMarried'] = false;
+console.log(john);
