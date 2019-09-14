@@ -752,23 +752,27 @@ GOOD LUCK 😀
 // 1 + 2 + 3 + 4
 
 var johnRestaurants = {
+    fullName: 'John Doe',
     bills: [124, 48, 268, 180, 42],
-    tips: [],
-    totalAmounts: [],
     calcTip: function() {
-        var tip, totalAmount, percentage;
-        for (var i = 0; i < this.bills.length; i++) {
-            if (this.bills[i] < 50) {
+        this.tips= [];
+        this.totalAmounts = [];
+
+        for (var i = 0; i < this.bills.length; i++)
+        {
+            var percentage;
+            var bill = this.bills[i];
+            // Determine percentage based on tipping rules
+            if (bill < 50) {
                 percentage = .2;
-            } else if (this.bills[i] >= 50 && this.bills[i] < 200) {
+            } else if (bill >= 50 && bill < 200) {
                 percentage = .15;
             } else {
                 percentage = .1;
             }
-            tip = percentage * this.bills[i];
-            totalAmount = tip + this.bills[i];
-            this.tips.push(tip);
-            this.totalAmounts.push(totalAmount);
+            // Add results to the corresponding percentage
+            this.tips[i] = bill * percentage;
+            this.totalAmounts[i] = bill + bill + percentage;
         }
     }
 }
@@ -776,30 +780,37 @@ var johnRestaurants = {
 // 5
 
 var markRestaurants = {
+    fullName: 'Mark Smith',
     bills: [77, 375, 110, 45],
     tips: [],
     totalAmounts: [],
     calcTip: function() {
-        var tip, totalAmount, percentage;
+        this.tips = [];
+        this.finalValues = [];
+                
         for (var i = 0; i < this.bills.length; i++) {
-            if (this.bills[i] < 100) {
+            // Determine percentage based on tipping rules
+            var percentage;
+            var bill = this.bills[i];
+            
+            if (bill < 100) {
                 percentage = .2;
-            } else if (this.bills[i] >= 100 && this.bills[i] < 300) {
+            } else if (bill >= 100 && bill < 300) {
                 percentage = .1;
             } else {
                 percentage = .25;
             }
-            tip = percentage * this.bills[i];
-            totalAmount = tip + this.bills[i];
-            this.tips.push(tip);
-            this.totalAmounts.push(totalAmount);
+            
+            // Add results to the corresponing arrays
+            this.tips[i] = bill * percentage;
+            this.finalValues[i] = bill + bill * percentage;
         }
     }
 }
 
 // 6
 
-var calcAverage = function(e) {
+function calcAverage(e) {
     var sum = 0;
     for (var i = 0; i < e.tips.length; i++) {
         sum += e.tips[i];
@@ -808,20 +819,22 @@ var calcAverage = function(e) {
     e.average = average;
 }
 
+// Do the calculations
+// Call the object's methods
 johnRestaurants.calcTip();
 markRestaurants.calcTip();
 
+// Calculate and add the average
 calcAverage(johnRestaurants);
 calcAverage(markRestaurants);
 
+// Print which family paid more on average
 var whoPaidMore = function() {
     if (johnRestaurants.average > markRestaurants.average) {
-        console.log('John\'s family paid the highest tips on average');
+        console.log(johnRestaurants.fullName + '\'s family paid the highest tips on average with an average of $' + johnRestaurants.average);
     } else {
-        console.log('Mark\'s family paid the highest tips on average');
+        console.log(markRestaurants.fullName + '\'s family paid the highest tips on average with an average of $' + markRestaurants.average);
     }
 }
 
-console.log(johnRestaurants.average);
-console.log(markRestaurants.average);
 whoPaidMore();
